@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UUID Generator — Free, Instant UUID v4</title>
+  <meta name="description" content="Generate a random UUID v4 instantly and copy it in one click. A free UUID generator that runs in your browser, with no account or saved history.">
+  <!-- SITE_METADATA -->
+  <meta name="theme-color" content="#2157da">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+  <script type="module" src="/app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to generator</a>
+  <header class="header wrap">
+    <a class="brand" href="/" aria-label="UUID generator home"><span class="brand-mark" aria-hidden="true">{ }</span> uuid<span class="brand-light">/generator</span></a>
+    <nav aria-label="Main navigation"><a href="#how-it-works">How it works</a><a href="#faq">FAQ</a></nav>
+  </header>
+  <main id="main" class="wrap">
+    <section class="intro" aria-labelledby="title">
+      <p class="eyebrow"><span class="dot" aria-hidden="true"></span> Small tool. Endless possibilities.</p>
+      <h1 id="title">UUID generator</h1>
+      <p class="lead">A fresh identifier for your next idea.<br>Generate it. Copy it. Get back to building.</p>
+    </section>
+    <section class="generator" aria-label="Generate a UUID">
+      <div class="tool-heading"><label for="uuid">Your UUID</label><span class="version">Version 4 <span aria-hidden="true">/</span> Random</span></div>
+      <textarea id="uuid" aria-describedby="status" readonly spellcheck="false" rows="2" placeholder="Generating your UUID…"></textarea>
+      <div class="actions"><button id="copy" class="primary" disabled>Copy UUID</button><button id="generate" class="secondary" disabled><span aria-hidden="true">↻</span> Generate new</button></div>
+      <p id="status" role="status" aria-live="polite">Preparing your generator…</p>
+      <noscript><p class="error">Turn on JavaScript in your browser to generate UUIDs.</p></noscript>
+      <div class="tool-foot"><span>Generated in your browser</span><span>No account. No saved history.</span></div>
+    </section>
+    <section id="how-it-works" class="explanation">
+      <div><p class="section-note">From click to clipboard</p><h2>One less thing<br>to think about.</h2><p>A UUID is an identifier you can use for records, test data, or a new project. This tool creates a random version 4 UUID whenever you need one.</p></div>
+      <ol class="steps"><li><h3>Start with a fresh UUID</h3><p>One is ready as soon as you open the page.</p></li><li><h3>Copy it to your project</h3><p>Click “Copy UUID” and paste it where you need it.</p></li><li><h3>Need another? Generate a new one.</h3><p>The new UUID replaces the previous one. Copy anything you want to keep before you leave.</p></li></ol>
+    </section>
+    <section id="faq" class="faq"><div><p class="section-note">A little context</p><h2>Good questions.</h2></div><div class="questions">
+      <details open><summary>What is a UUID?</summary><p>UUID stands for universally unique identifier. It is a 128-bit value, usually written as 32 hexadecimal characters separated by four hyphens: 36 characters in total.</p></details>
+      <details><summary>Which UUID version does this generate?</summary><p>This tool generates random version 4 UUIDs using your browser’s cryptographically secure random generator. The output uses lowercase letters and the standard 8-4-4-4-12 format.</p></details>
+      <details><summary>Can two UUIDs be the same?</summary><p>Duplicates are possible, but extremely unlikely with correctly generated UUID v4 values. They contain 122 random bits. For important records, your application should still enforce uniqueness.</p></details>
+      <details><summary>Are my UUIDs saved or sent anywhere?</summary><p>This tool generates UUIDs on your device. It does not store them or send them to a server. Copying writes only the current UUID to your clipboard. The hosting provider may process normal page request logs.</p></details>
+      <details><summary>Is this free to use?</summary><p>Yes. Generate and copy UUIDs without an account. This first version creates one UUID at a time.</p></details>
+      <details><summary>Can I use a UUID as a password?</summary><p>A UUID is intended to identify something. Use a dedicated password or secret generator for credentials.</p></details>
+    </div></section>
+  </main>
+  <footer class="wrap footer"><span>uuid/generator</span><span>A small utility, ready when you are.</span><a href="#main">Back to generator ↑</a></footer>
+</body>
+</html>
